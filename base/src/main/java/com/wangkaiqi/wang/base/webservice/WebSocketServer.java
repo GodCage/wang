@@ -100,7 +100,7 @@ public class WebSocketServer {
     /**
      * 群发自定义消息
      */
-    public static void sendInfo(String message) throws IOException {
+    public static void sendInfo(String message)  {
         log.info(message);
         for (WebSocketServer item : webSocketSet) {
             try {

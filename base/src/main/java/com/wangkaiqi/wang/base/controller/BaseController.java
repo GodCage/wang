@@ -29,7 +29,7 @@ public class BaseController {
         log.info("test===================");
         JSONObject jsonObject = new JSONObject();
         //接受短信的用户手机号码
-        jsonObject.put("mobile","17326169053");
+        jsonObject.put("mobile","18816271671");
         //您申请的短信模板ID，根据实际情况修改
         jsonObject.put("tpl_id","126383");
         //您设置的模板变量，根据实际情况修改

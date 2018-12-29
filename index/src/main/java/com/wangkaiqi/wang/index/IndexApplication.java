@@ -2,8 +2,9 @@ package com.wangkaiqi.wang.index;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
-//@EnableFeignClients({"com.wangkaiqi.wang.base.feign"})
+@EnableScheduling
 @SpringBootApplication(scanBasePackages = "com.wangkaiqi.wang")
 public class IndexApplication {
 
