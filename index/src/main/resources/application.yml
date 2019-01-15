@@ -14,3 +14,25 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: root
+  kafka:
+    secondary:
+      service:
+        test:
+          bootstrap-servers: 172.16.239.7:9092
+          consumer:
+            group-id: test-dev
+                     #10.65.3.5:9092
+          topic:
+            topic-1: test_test
+
+
+#跨域支持
+web.cors:
+  enabled: true
+  allowCredentials: true
+  allowedOrigins:
+    - '*'
+  allowedHeaders:
+    - '*'
+  allowedMethods:
+    - '*'

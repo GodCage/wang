@@ -1,6 +1,5 @@
 package com.wangkaiqi.wang.base.timeservice;
 
-import com.wangkaiqi.wang.base.webservice.WebSocketServer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -16,7 +15,7 @@ import org.springframework.stereotype.Component;
 public class ScheduledService {
     @Scheduled(cron = "0/5 * * * * *")
     public void scheduled() {
-        WebSocketServer.sendInfo("定时任务-socket测试");
+    //    WebSocketServer.sendInfo("定时任务-socket测试");
     }
     
 //    @Scheduled(fixedRate = 5000)

@@ -21,8 +21,6 @@ public interface BaseFeign {
      */
     @GetMapping(value="/sms/send")
     JSONObject sendMessage(@RequestParam JSONObject jsonObject);
-    
-    
 }
 
 
