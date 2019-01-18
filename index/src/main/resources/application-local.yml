@@ -1,0 +1,17 @@
+spring:
+  datasource:
+#    url: jdbc:log4jdbc:mysql://localhost:3306/wang?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false
+    url: jdbc:mysql://localhost:3306/wang?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+  kafka:
+    secondary:
+      service:
+        test:
+          bootstrap-servers: 172.16.239.7:9092
+          consumer:
+            group-id: test-dev
+                     #10.65.3.5:9092
+          topic:
+            topic-1: test_test

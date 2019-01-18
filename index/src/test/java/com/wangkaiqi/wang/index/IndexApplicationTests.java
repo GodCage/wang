@@ -1,17 +1,22 @@
 package com.wangkaiqi.wang.index;
 
+import com.wangkaiqi.wang.index.elasticsearch.ElasticsearchApi;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Date;
-import java.util.TimeZone;
+import java.util.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@ActiveProfiles("dev")
 public class IndexApplicationTests {
 
+    @Autowired
+    ElasticsearchApi elasticsearchApi;
     @Test
     public void contextLoads() {
         long current=System.currentTimeMillis();//当前时间毫秒数
@@ -32,6 +37,29 @@ public class IndexApplicationTests {
         System.out.println(a.trim().equals(""));
         System.out.println(a);
     }
+    @Test
+    public void es_test2() {
+        Map<String,Object> persion = new HashMap<>();
+        Map<String,Object> car = new HashMap<>();
+        List<Map<String,Object>> cars = new ArrayList<>();
+        car.put("pic","http://");
+        car.put("color","yellow");
+        car.put("tollNo","苏E12323");
+        cars.add(car);
+        
+        persion.put("name","李四");
+        persion.put("age",30);
+        persion.put("qq","18654564");
+        persion.put("address","宋泽家园");
+        persion.put("cars",cars);
+        
+        elasticsearchApi.setData(persion);
+    }
+    @Test
+    public void es_test3() {
+        elasticsearchApi.getData();
+    }
+    
     
     public static void main(String[] args) {
        new  IndexApplicationTests().test2();
