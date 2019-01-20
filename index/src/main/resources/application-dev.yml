@@ -26,7 +26,7 @@ spring:
     elasticsearch:
       repositories:
         enabled: true
-      cluster-nodes: 192.168.8.175:9300
+      cluster-nodes: localhost:9300
       cluster-name: elasticsearch
       properties:
         transport:

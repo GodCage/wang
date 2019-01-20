@@ -39,26 +39,9 @@ public class IndexApplicationTests {
     }
     @Test
     public void es_test2() {
-        Map<String,Object> persion = new HashMap<>();
-        Map<String,Object> car = new HashMap<>();
-        List<Map<String,Object>> cars = new ArrayList<>();
-        car.put("pic","http://");
-        car.put("color","yellow");
-        car.put("tollNo","苏E12323");
-        cars.add(car);
-        
-        persion.put("name","李四");
-        persion.put("age",30);
-        persion.put("qq","18654564");
-        persion.put("address","宋泽家园");
-        persion.put("cars",cars);
-        
-        elasticsearchApi.setData(persion);
+
     }
-    @Test
-    public void es_test3() {
-        elasticsearchApi.getData();
-    }
+
     
     
     public static void main(String[] args) {

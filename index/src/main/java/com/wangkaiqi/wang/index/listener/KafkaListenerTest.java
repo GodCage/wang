@@ -13,14 +13,14 @@ import java.util.Optional;
 @Component
 @Slf4j
 public class KafkaListenerTest {
-    @KafkaListener(topics = "${spring.kafka.consumer.topic-1}")
-  //@KafkaListener(topics = "test_test")
-  public void listen(ConsumerRecord<?, String> record) {
-
-        Optional<String> kafkaMessage = Optional.ofNullable(record.value());
-        if (!kafkaMessage.isPresent()) {
-            return;
-        }
-        log.info("listen(), topic = " + record.topic() + ", value = " + record.value());
-    }
+//    @KafkaListener(topics = "${spring.kafka.consumer.topic-1}")
+//  //@KafkaListener(topics = "test_test")
+//  public void listen(ConsumerRecord<?, String> record) {
+//
+//        Optional<String> kafkaMessage = Optional.ofNullable(record.value());
+//        if (!kafkaMessage.isPresent()) {
+//            return;
+//        }
+//        log.info("listen(), topic = " + record.topic() + ", value = " + record.value());
+//    }
 }
