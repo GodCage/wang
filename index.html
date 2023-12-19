@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>产品展示</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .product {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .product-image {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: auto;
+    }
+
+    .product-details {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding-left: 20px;
+    }
+
+    .product-title {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .product-description {
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .product-price {
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>产品展示</h1>
+
+    <div class="product">
+      <div class="product-image">
+        <img src="product1.jpg" alt="产品1">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">产品标题1</h2>
+        <p class="product-description">这是产品1的描述。</p>
+        <p class="product-price">$29.99</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-image">
+        <img src="product2.jpg" alt="产品2">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">产品标题2</h2>
+        <p class="product-description">这是产品2的描述。</p>
+        <p class="product-price">$39.99</p>
+      </div>
+    </div>
+
+    <!-- 添加更多产品项 -->
+
+  </div>
+</body>
+</html>
